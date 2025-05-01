@@ -90,18 +90,21 @@
     margin: 5px;
     vertical-align: center;
     text-align: center;
-    width: 500px;
-    transition: width 500ms;
+    max-width: 500px;
+    transition-duration: 3s;
+    transition-duration: border-color 500ms;
+    transition-duration: border-width 500ms;
+  }
+
+  .content > div:hover {
+    border-style: double;
+    border-width: 5px;
   }
 
   .insideContent {
     display: flex;
     flex-direction: row;
     margin: 10px;
-  }
-
-  .content > div:hover {
-    width: 600px;
   }
 
   li:hover {
