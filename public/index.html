@@ -2,48 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This is a test website for an assignment on Web Programming. Will be a good website one day :D">
-    <title>Ivor Personal Website</title>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the Devcrafters website for Web Programming Assignment 2">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <header class="header">
-            <nav>
-                <ul class="nav">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./AboutMe.html">About Me</a></li>
-                    <li><a href="./Projects.html">Projects</a></li>
+    <header>
+        <nav id="navbar_top">
+            <div class="container nav-container">
+                <div class="logo">Devcrafters</div>
+                <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+                <ul class="navbar-nav" id="nav-links">
+                    <li><a href="index.html"><span>Home</span></a></li>
+                    <li><a href="about.html"><span>About Us</span></a></li>
+                    <li><a href="project.html"><span>Project</span></a></li>
                 </ul>
-            </nav>
-        </header>
-
-    <main class="main">
-        <div>
-
-        </div>
-        <div class="content">
-            <div>
-                <h1>Welcome to my Website!</h1>
-                <img src="svg/ProfilePhoto.png" width="300" alt="Ivor">
             </div>
-            <div>
-                <p>Hey! I am <b>Ivor</b>, and this is a website to test out HTML, CSS and JavaScript features!</p>
+        </nav>
+    </header>
+    <main class="main-section">
+        <section class="container hero-section fade-in">
+            <div class="row">
+                <div class="column">
+                    <div class="banner-left">
+                        <h1>Hi There, We're</h1>
+                        <h2>Devcrafters</h2>
+                        <span class="head-bottom"></span>
+                        <p>We are a group of passionate software engineering students dedicated to designing and developing impactful digital solutions. At Devcrafters, we believe that technology should not only work well but also feel good to use. Every project we take on is a chance for us to learn, grow, and bring ideas to life through code.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="banner-img">
+                        <img src="logo.png" alt="Devcrafters logo">
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Check out my other <a href="./Projects.html">projects</a> listed or learn more about <a href="./AboutMe.html">me</a>!</p>
-            </div>
-        </div>
+        </section>        
     </main>
-
-    <footer class="footer">
-        <p>Ivor Barrie Jaffery &copy; 2025</p>
-        <a href="https://github.com/dotrovi"><img src="svg/github-mark.svg" width="40px" alt="Github Page"></a>
-        <a href="https://www.linkedin.com/in/ivor-barrie-jaffery-341096272/"><img src="svg/icons8-linkedin.svg" width="40px" alt="Linkedin Page"></a>
+    <footer>
+        <p>&copy; 2025 Devcrafters. All rights reserved.</p>
     </footer>
-  </div>
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById("nav-links");
+            nav.classList.toggle("active");
+        }
+    </script>    
 </body>
-</html>
-<!--React, Angular, Vue.js << Check them out!!-->
+</html>      
